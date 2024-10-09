@@ -262,6 +262,8 @@ let protocol;
 let socks5Data;
 export default {
 	async fetch (request, env) {
+		console.log('request', request);
+		console.log('env', env.DB);
 		if (env.TOKEN) mytoken = await ADD(env.TOKEN);
 		//mytoken = env.TOKEN.split(',') || mytoken;
 		BotToken = env.TGTOKEN || BotToken;
